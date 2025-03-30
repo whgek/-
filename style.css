@@ -1,0 +1,48 @@
+
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+.controls {
+  padding: 10px;
+  font-size: 1.1em;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+#map {
+  height: 60vh;
+  width: 100vw;
+}
+select, button {
+  padding: 10px;
+  font-size: 1em;
+  width: 90%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+#question {
+  font-size: 1.2em;
+  margin: 10px;
+}
+#score {
+  font-size: 1.2em;
+  color: #336699;
+}
+#result {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 10px;
+}
+@media (min-width: 768px) {
+  .controls {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  #map {
+    height: 600px;
+  }
+}

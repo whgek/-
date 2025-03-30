@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>대륙별 나라/수도 찾기 게임</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+  <link rel="manifest" href="manifest.json">
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js');
+    }
+  </script>
+</head>
+
+<body>
+  <h1>🌍 대륙별 나라/수도 찾기 게임</h1>
+  <div class="controls">
+    <label for="continent">대륙 선택:</label>
+    <select id="continent">
+      <option value="">-- 선택 --</option>
+      <option value="Asia">아시아</option>
+      <option value="Europe">유럽</option>
+      <option value="Africa">아프리카</option>
+      <option value="Oceania">오세아니아</option>
+      <option value="North America">북아메리카</option>
+      <option value="South America">남아메리카</option>
+    </select>
+
+    <label for="mode">문제 유형:</label>
+    <select id="mode">
+      <option value="country">나라 찾기</option>
+      <option value="capital">수도 찾기</option>
+    </select>
+
+    <button onclick="newQuestion()">문제 내기</button>
+    <p id="question"></p>
+    <p id="score">점수: 0</p>
+  </div>
+
+  <div id="map"></div>
+  <p id="result"></p>
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
